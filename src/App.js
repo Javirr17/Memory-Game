@@ -13,13 +13,21 @@ function App() {
     <Router>
       <div className="App">
         <h1>MEMORY GAME</h1>
+        <div className="contenedor-principal">
         <Routes>
 
           <Route path="/" element={<PantallaJuego IDarray={IDarray}/>}>
           </Route>
         
+          <Route path="/" >
+          </Route>
+
+          <Route path="/" >
+          </Route>
+
         </Routes>
         </div>
+      </div>
     </Router>
   );
 }
