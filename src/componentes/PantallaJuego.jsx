@@ -1,6 +1,7 @@
 import React from "react";
 import "../stylesheets/PantallaJuego.css";
 import Ficha from "./Ficha";
+import Boton from './Boton';
 import {useState} from "react";
 import useSound from "use-sound";
 import flippingSoundURL from "../sounds/Card-flip-sound-effect.mp3";
@@ -59,6 +60,10 @@ function PantallaJuego({IDarray}) {
             }, 1000);
     };
 
+    const buttonHandler = () => {
+        window.location.reload();
+    };
+
     const clickHandler = (ficha, setFicha, otraFicha) => {
 
 			if(ficha === false && counter === 0){
@@ -90,19 +95,22 @@ function PantallaJuego({IDarray}) {
 		} 
 
 	return (
-		<div className="contenedor-principal">
-            <div className={win ? "pantalla-victoria" : "pantalla-juego"}>YOU WIN</div>
-            <Ficha id={IDarray[0]} ficha={fichas[0]} clickHandler={() => clickHandler(ficha1, setFicha1, buscarParejaFicha(0))}/>
-            <Ficha id={IDarray[1]} ficha={fichas[1]} clickHandler={() => clickHandler(ficha2, setFicha2, buscarParejaFicha(1))}/>
-            <Ficha id={IDarray[2]} ficha={fichas[2]} clickHandler={() => clickHandler(ficha3, setFicha3, buscarParejaFicha(2))}/>
-            <Ficha id={IDarray[3]} ficha={fichas[3]} clickHandler={() => clickHandler(ficha4, setFicha4, buscarParejaFicha(3))}/>
-            <Ficha id={IDarray[4]} ficha={fichas[4]} clickHandler={() => clickHandler(ficha5, setFicha5, buscarParejaFicha(4))}/>
-            <Ficha id={IDarray[5]} ficha={fichas[5]} clickHandler={() => clickHandler(ficha6, setFicha6, buscarParejaFicha(5))}/>
-            <Ficha id={IDarray[6]} ficha={fichas[6]} clickHandler={() => clickHandler(ficha7, setFicha7, buscarParejaFicha(6))}/>
-            <Ficha id={IDarray[7]} ficha={fichas[7]} clickHandler={() => clickHandler(ficha8, setFicha8, buscarParejaFicha(7))}/>
-            <Ficha id={IDarray[8]} ficha={fichas[8]} clickHandler={() => clickHandler(ficha9, setFicha9, buscarParejaFicha(8))}/>
-            <Ficha id={IDarray[9]} ficha={fichas[9]} clickHandler={() => clickHandler(ficha10, setFicha10, buscarParejaFicha(9))}/>
-        </div>
+        <>
+            <div className="contenedor-principal">
+                <div className={win ? "pantalla-victoria" : "pantalla-juego"}>YOU WIN</div>
+                <Ficha id={IDarray[0]} ficha={fichas[0]} clickHandler={() => clickHandler(ficha1, setFicha1, buscarParejaFicha(0))}/>
+                <Ficha id={IDarray[1]} ficha={fichas[1]} clickHandler={() => clickHandler(ficha2, setFicha2, buscarParejaFicha(1))}/>
+                <Ficha id={IDarray[2]} ficha={fichas[2]} clickHandler={() => clickHandler(ficha3, setFicha3, buscarParejaFicha(2))}/>
+                <Ficha id={IDarray[3]} ficha={fichas[3]} clickHandler={() => clickHandler(ficha4, setFicha4, buscarParejaFicha(3))}/>
+                <Ficha id={IDarray[4]} ficha={fichas[4]} clickHandler={() => clickHandler(ficha5, setFicha5, buscarParejaFicha(4))}/>
+                <Ficha id={IDarray[5]} ficha={fichas[5]} clickHandler={() => clickHandler(ficha6, setFicha6, buscarParejaFicha(5))}/>
+                <Ficha id={IDarray[6]} ficha={fichas[6]} clickHandler={() => clickHandler(ficha7, setFicha7, buscarParejaFicha(6))}/>
+                <Ficha id={IDarray[7]} ficha={fichas[7]} clickHandler={() => clickHandler(ficha8, setFicha8, buscarParejaFicha(7))}/>
+                <Ficha id={IDarray[8]} ficha={fichas[8]} clickHandler={() => clickHandler(ficha9, setFicha9, buscarParejaFicha(8))}/>
+                <Ficha id={IDarray[9]} ficha={fichas[9]} clickHandler={() => clickHandler(ficha10, setFicha10, buscarParejaFicha(9))}/>
+            </div>
+            <Boton buttonHandler={buttonHandler}/>
+        </>
 	);
 }
 

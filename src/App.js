@@ -1,6 +1,6 @@
 import './App.css';
 import PantallaJuego from './componentes/PantallaJuego';
-import Boton from './componentes/Boton';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -9,16 +9,18 @@ function App() {
     return Math.random() - 0.5;
   });
 
-  const buttonHandler = () => {
-    window.location.reload();
-  };
-
   return (
-    <div className="App">
-      <h1>MEMORY GAME</h1>
-      <PantallaJuego IDarray={IDarray}/>
-      <Boton buttonHandler={buttonHandler}/>
-    </div>
+    <Router>
+      <div className="App">
+        <h1>MEMORY GAME</h1>
+        <Routes>
+
+          <Route path="/" element={<PantallaJuego IDarray={IDarray}/>}>
+          </Route>
+        
+        </Routes>
+        </div>
+    </Router>
   );
 }
 
