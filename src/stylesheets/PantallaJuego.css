@@ -1,0 +1,33 @@
+.contenedor-principal {
+    background-color: #49498A;
+    width: 1500px;
+    height: 700px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border: 3px solid #FA47F4;
+    box-shadow:  5px 5px 40px #FA47F4,
+                -5px -5px 40px #FA47F4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+.pantalla-victoria {
+  position: absolute;
+  background-color: #49498A;
+  width: 1500px;
+  height: 700px;
+  border-radius: 20px;
+  font-size: 85px;
+  font-family: Lato, sans-serif;
+  text-shadow: 4px 4px 10px #FA47F4,
+              -4px -4px 10px #FA47F4;
+  color: white;
+  text-align: center;
+  line-height: 650px;
+}
+
+.pantalla-juego {
+  display: none;
+}

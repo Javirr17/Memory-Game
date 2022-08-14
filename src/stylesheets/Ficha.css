@@ -1,0 +1,32 @@
+.ficha {
+	width: 200px;
+	height: 200px;
+	margin: 70px 45px;
+	border-radius: 20px;
+	box-shadow:  10px 10px 40px #373769,
+				-10px -10px 40px #373769;
+}
+
+.desactivada {
+	background-color: #276FE6;
+}
+
+.id1{
+	background-image: url("../images/life_s-a-trip.jpg");
+}
+
+.id2{
+	background-image: url("../images/allty.jpg");
+}
+
+.id3{
+	background-image: url("../images/allty3.jpg");
+}
+
+.id4{
+	background-image: url("../images/trip\ at\ knight.jpg");
+}
+
+.id5{
+	background-image: url("../images/pegasus.jpg");
+}
