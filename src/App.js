@@ -1,5 +1,6 @@
 import './App.css';
 import PantallaJuego from './componentes/PantallaJuego';
+import HomePage from './componentes/HomePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -16,10 +17,10 @@ function App() {
         <div className="contenedor-principal">
         <Routes>
 
-          <Route path="/" element={<PantallaJuego IDarray={IDarray}/>}>
+          <Route path="/game" element={<PantallaJuego IDarray={IDarray}/>}>
           </Route>
         
-          <Route path="/" >
+          <Route path="/" element={<HomePage />}>
           </Route>
 
           <Route path="/" >

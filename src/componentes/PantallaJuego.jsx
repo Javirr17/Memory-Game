@@ -1,7 +1,6 @@
 import React from "react";
 import "../stylesheets/PantallaJuego.css";
 import Ficha from "./Ficha";
-import Boton from './Boton';
 import {useState} from "react";
 import useSound from "use-sound";
 import flippingSoundURL from "../sounds/Card-flip-sound-effect.mp3";
@@ -107,7 +106,8 @@ function PantallaJuego({IDarray}) {
             <Ficha id={IDarray[7]} ficha={fichas[7]} clickHandler={() => clickHandler(ficha8, setFicha8, buscarParejaFicha(7))}/>
             <Ficha id={IDarray[8]} ficha={fichas[8]} clickHandler={() => clickHandler(ficha9, setFicha9, buscarParejaFicha(8))}/>
             <Ficha id={IDarray[9]} ficha={fichas[9]} clickHandler={() => clickHandler(ficha10, setFicha10, buscarParejaFicha(9))}/>
-            <Boton buttonHandler={buttonHandler}/>
+            <div className="boton reset" onClick={buttonHandler}>Reset</div>
+            <a href="/"><div className="boton home" >Home</div></a>
         </>
 	);
 }
